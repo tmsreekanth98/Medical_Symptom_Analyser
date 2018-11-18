@@ -1,0 +1,53 @@
+Symptom Analyser
+
+Get diagnosis/treatment instructions for particular symptoms!
+
+
+
+###Getting Started###
+
+	##Prerequisites##
+	
+	1) Django 2 (Python Web development framework)
+	
+	
+	##Installation##
+
+	1) Install Django by running
+		pip install django
+	2) Go to the project folder with manage.py file and run the following terminal command
+		python3 manage.py runserver
+	3) The project will be live at 127.0.0.1:8000/
+
+
+	##Running Unit Tests##
+	
+	Unit test code has been written in the tests.py file in the Med app of the project. 
+	The unit tests can be run by following the following steps	
+
+	1) Go to the project folder with manage.py file and run the following terminal command
+		python3 manage.py test Med -v 2
+	2) All the tests and their results will be shown on the terminal
+
+
+
+###Features###
+
+1) Medical conditions for symptoms
+2) Treatment suggestions for each possible medical condition
+3) Nearby Doctor suggestion (Location share needed)
+
+
+
+###APIs used###
+
+APIMedic API: https://apimedic.com/
+(For Symptoms, Medical conditions, Treatment information)
+
+Google Places API
+(For Nearby Doctor Suggestions)
+
+
+
+
+

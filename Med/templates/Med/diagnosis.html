@@ -1,0 +1,73 @@
+{% extends 'Med/base.html' %}
+
+{% load static %}
+
+
+{% block base_block %}
+
+
+
+
+<div align="center">
+	<h2 class="display-5"><br>Possible Medical Conditions are</h2>
+	<p id="demo">Click "Allow" on location share popup to share your location so that nearby doctors can be suggested.</p>
+</div>
+
+{% if diagnosis_list %}
+	<div class="diagnosis_list_container">
+		<div class="row">
+			{% for x in diagnosis_list %}
+			<div class="col-lg-4" align="center">
+				
+				<div class="diagnosis_details_container" align="center">
+					<h5 class="display-5">{{x.Issue.Name}}</h5>
+					
+					<h6>({{x.Issue.ProfName}})</h6>
+					<hr class="my-2">
+					<br>
+					<h6>SPECIALIST DETAILS:</h6>
+					{{x.Specialisation.0.Name}}<br>
+					{{x.Specialisation.1.Name}}<br>
+					{{x.Specialisation.2.Name}}<br>
+					<br>
+					<div class="treatment_button">
+						<button class="btn btn-primary" onClick="getLocation({{x.Issue.ID}});">GET TREATMENT INSTRUCTIONS</button>
+
+						
+					</div>
+				</div>
+				
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+{% else %}
+	<br><br>
+	<h4><div align="center">No Diagnosis Found!</div></h4>
+{% endif %}
+
+
+
+
+
+<!-- The HTML5 GeoLocation API to obtain users location which is needed to suggest nearby doctors!-->
+<script>
+var x = document.getElementById("demo");
+var y;
+function getLocation(issue_id) {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        y=issue_id;
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    // x.innerHTML = "Latitude: " + position.coords.latitude + 
+    // "<br>Longitude: " + position.coords.longitude; 
+   window.location='../../../../../treatment/'+y+'/'+position.coords.latitude+"/"+position.coords.longitude+"/"
+}
+</script>
+
+
+{% endblock %}

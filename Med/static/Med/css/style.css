@@ -1,0 +1,68 @@
+
+.symptom_container{
+	background-color: white;
+	padding: 5px;
+	border: 1px solid skyblue;
+	width: 95%;
+	height:50px;
+	margin:10px 10px 10px 10px;
+	color: #101010;
+	font-family: Verdana;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.symptom_container:hover{
+	background-color: #202020;
+	color: white;
+	border: 1px solid black;
+}
+
+.symptom_list_container{
+	margin:20px;
+	padding: 25px;
+	border: 5px solid #303030;
+	overflow-y: scroll;
+	height:400px;
+}
+
+.title{
+	background-color: skyblue;
+	padding: 25px;
+	color: #454545;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.get_diagnosis_container{
+	width: 50%;
+	padding: 25px;
+	border: 5px solid #303030;
+	margin-bottom: 20px;
+	margin-left: 25%;
+}
+
+
+.diagnosis_details_container{
+	background-color: white;
+	padding: 5px;
+	border: 3px solid #101010;
+	width: 95%;
+	height: 50%;
+	margin:10px 10px 10px 10px;
+	color: #202020;
+	font-family: Verdana;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.diagnosis_list_container{
+	margin:20px;
+	padding: 25px;
+	border: 5px solid white;
+}
+
+.treatment_button{
+	margin-bottom: 5px;
+}

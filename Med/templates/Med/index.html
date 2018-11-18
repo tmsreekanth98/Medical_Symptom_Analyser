@@ -1,0 +1,34 @@
+{% extends 'Med/base.html' %}
+
+{% load static %}
+
+
+{% block base_block %}
+
+
+
+
+
+<br>
+
+<div align="center">
+	<h2 class="display-5">Select your symptom</h2>
+</div>
+
+
+<div class="symptom_list_container">
+	<div class="row">
+		{% for x,y in symptom_list.items %}
+		<div class="col-lg-3" align="center">
+			<a href="{% url 'symptom_page' x %}">
+			<div class="symptom_container" align="center">
+				{{y}}
+			</div>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+
+{% endblock %}
