@@ -10,13 +10,24 @@
 
 
 <br>
-
-<div align="center">
-	<h2 class="display-5">Select your symptom</h2>
-</div>
 <br>
 
-<div class="symptom_list_container">
+
+<div align="center">
+	<h2 class="display-5">LOGIN TO CONTINUE</h2>
+</div>
+
+<div align="center" class="login-register-panel">
+	<form method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<br><br>
+		<input type="submit" value="submit">
+	</form>
+	{{login_status}}
+</div>
+
+<!-- <div class="symptom_list_container">
 	<div class="row">
 		{% for x,y in symptom_list.items %}
 		<div class="col-lg-3" align="center">
@@ -28,7 +39,7 @@
 		</div>
 		{% endfor %}
 	</div>
-</div>
+</div> -->
 
 
 {% endblock %}

@@ -6,7 +6,7 @@ import base64
 import ast,json
 from .models import Symptoms,Issue
 from Med.forms import InputForm
-
+from django.contrib.auth.decorators import login_required
 
 
 def getAuthToken():
@@ -33,7 +33,7 @@ def getAuthToken():
 
 
 
-
+@login_required
 def home(request):
 
 	#Sending POST request to obtain list of medical symptoms when the homepage loads up
@@ -65,11 +65,11 @@ def home(request):
 
 
 
-
+@login_required
 def symptom_page(request,symptom_id):
 
 	#Form data handling for year of birth and gender
-	if(request.method=='POST'):
+	if request.method=='POST':
 		form = InputForm(request.POST)
 		if form.is_valid():
 			YOB=form.cleaned_data['Year_of_Birth']
@@ -88,7 +88,7 @@ def symptom_page(request,symptom_id):
 
 
 
-
+@login_required
 def symptom_diagnosis(request,symptom_id,yob,gender):
 
 	#Calling diagnosis API to retrieve the possible diagnosis
@@ -156,7 +156,7 @@ def symptom_diagnosis(request,symptom_id,yob,gender):
 
 
 
-
+@login_required
 def treatment(request,issue_id,lat,lon):
 	#Obtaining the issue object corresponding to the issue id of the URL
 	issue_object = Issue.objects.get(issue_id=issue_id)

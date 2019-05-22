@@ -19,9 +19,8 @@ from django.urls import path
 from Med import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('symptom/<symptom_id>/',views.symptom_page,name='symptom_page'),
-    path('symptom/<symptom_id>/diagnosis/<yob>/<gender>/',views.symptom_diagnosis,name='symptom_diagnosis'),
+    path('<symptom_id>/',views.symptom_page,name='symptom_page'),
+    path('<symptom_id>/diagnosis/<yob>/<gender>/',views.symptom_diagnosis,name='symptom_diagnosis'),
     path('treatment/<issue_id>/<lat>/<lon>/',views.treatment,name='treatment'),
 ]

@@ -22,7 +22,9 @@
 	padding: 25px;
 	border: 5px solid #303030;
 	overflow-y: scroll;
-	height:400px;
+	height:60%;
+	width:75%;
+	margin: auto;
 }
 
 .title{
@@ -41,6 +43,7 @@ a:hover{
 	border: 5px solid #303030;
 	margin-bottom: 20px;
 	margin-left: 25%;
+	margin: auto;
 }
 
 
@@ -49,7 +52,7 @@ a:hover{
 	padding: 5px;
 	border: 3px solid #101010;
 	width: 95%;
-	height: 50%;
+	
 	margin:10px 10px 10px 10px;
 	color: #202020;
 	font-family: Verdana;
@@ -65,4 +68,18 @@ a:hover{
 
 .treatment_button{
 	margin-bottom: 5px;
+}
+
+
+/*STYLE FOR REGISTRATION APP BEGINS*/
+
+.login-register-panel{
+	background-color: white;
+	padding: 20px;
+	border: 3px solid #101010;
+	width: 15%;
+	margin:auto;
+	color: #202020;
+	font-family: Verdana;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
