@@ -17,7 +17,7 @@
 	<div class="diagnosis_list_container">
 		<div class="row">
 			{% for x in diagnosis_list %}
-			<div class="col-lg-4" align="center">
+			<div class="col-lg-3" align="center">
 				
 				<div class="diagnosis_details_container" align="center">
 					<h5 class="display-5">{{x.Issue.Name}}</h5>
@@ -31,7 +31,18 @@
 					{{x.Specialisation.2.Name}}<br>
 					<br>
 					<div class="treatment_button">
-						<button class="btn btn-primary" onClick="getLocation({{x.Issue.ID}});">GET TREATMENT INSTRUCTIONS</button>
+						<div align="center" class="row">
+							<div align="center" class="col-lg-5">
+								<button class="btn btn-primary" onClick="getLocation({{x.Issue.ID}});">TREATMENT INSTRUCTIONS</button>
+							</div>
+							<div class="col-lg-1">
+								&nbsp;&nbsp;
+							</div>
+							<div align="center" class="col-lg-6">
+								<button class="btn btn-secondary" onClick="">PIN TO PROFILE</button>
+							</div>
+						</div>
+						
 
 						
 					</div>

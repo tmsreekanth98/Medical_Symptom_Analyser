@@ -22,5 +22,8 @@ class Issue(models.Model):
 	specialist_three=models.CharField(max_length=100)
 	treatment_details=models.CharField(max_length=2000)
 
+	#User pinned issue notes
+	notes=models.CharField(max_length=200,default="")
+	
 	def __str__(self):
 		return str(self.issue_id)

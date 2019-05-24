@@ -14,16 +14,16 @@
 
 	<div class="row">
 		<div class="col-lg-8">
-			<h1>Symptom Analyser</h1>
+			<h1 style="color:white;">Symptom Analyser</h1>
 	
-			<p>Obtain medical diagnosis details and potential treatment solutions just by selecting your medical symptoms!</p>
+			<p style="color:white;">Obtain medical diagnosis details and potential treatment solutions just by selecting your medical symptoms!</p>
 		</div>
 		<div align="right" style="padding: 25px;" class="col-lg-4">
 
 			{% if request.user.username %}
-				<span style="color: darkblue;padding: 5px;">{{request.user.username}}</span>
+				Hello<span style="font-weight: bolder;color: black;padding: 5px;"> {{request.user.username}}</span>
 				<br>
-				<a style="color:#101010;background-color: white;padding:5px;border-radius: 5px;" href="{% url 'logout' %}">LOGOUT</a>
+				<a style="color:#fff;background-color: #000000;padding:6px;border-radius: 5px;width: 100%;" href="{% url 'logout' %}">LOGOUT</a>
 			{% endif %}
 		</div>
 	</div>
