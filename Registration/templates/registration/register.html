@@ -14,19 +14,19 @@
 
 
 <div align="center">
-	<h2 class="display-5">LOGIN TO CONTINUE</h2>
+	<h2 class="display-5">REGISTER</h2>
 </div>
 
 <div align="center" class="login-register-panel">
 	<form method="POST">
+		{{form.errors}}
 		{% csrf_token %}
 		{{form.as_p}}
 		<br>
-		<input type="submit" value="Login">
+		<input type="submit" value="Register">
 	</form>
-	<p>Not a member yet? <a href="{% url 'register' %}">Click Here</a> to register</p>
+	{{error}}
 </div>
-
 
 <!-- <div class="symptom_list_container">
 	<div class="row">
